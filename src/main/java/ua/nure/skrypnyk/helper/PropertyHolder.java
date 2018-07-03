@@ -3,9 +3,7 @@ package ua.nure.skrypnyk.helper;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Created by Kovantonlenko on 4/5/2016.
- */
+
 public final class PropertyHolder {
 
     private static PropertyHolder propertyHolder;
