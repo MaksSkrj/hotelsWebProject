@@ -90,8 +90,8 @@ public abstract class CrudDAO<T extends Entity<Integer>> implements DAO<Integer,
 
     @Override
     public void update(T entity) {
-        try ( Connection connection = dataSource.getConnection();
-              PreparedStatement preparedStatement = createUpdateStatement(connection, entity)){
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement preparedStatement = createUpdateStatement(connection, entity)) {
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -103,7 +103,7 @@ public abstract class CrudDAO<T extends Entity<Integer>> implements DAO<Integer,
         String sql = String.format(DELETE_BY_ID, type.getSimpleName());
 
         try (Connection connection = dataSource.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(sql)){
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setInt(1, key);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

@@ -37,7 +37,6 @@ public class DataSource {
         PropertyHolder propertyHolder = PropertyHolder.getInstance();
         try {
             poolConnections.setDriverClass(propertyHolder.getDbDriver()); //loads the jdbc driver
-
             poolConnections.setJdbcUrl(propertyHolder.getJdbcUrl());
             poolConnections.setUser(propertyHolder.getDbUserLogin());
             poolConnections.setPassword(propertyHolder.getDbUserPassword());
@@ -48,5 +47,6 @@ public class DataSource {
         } catch (PropertyVetoException e) {
             e.printStackTrace();
         }
+        System.out.println(poolConnections + "~~~~~~~~~~~~~~~~~~");
     }
 }
