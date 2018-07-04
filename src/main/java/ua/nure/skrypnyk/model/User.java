@@ -3,6 +3,7 @@ package ua.nure.skrypnyk.model;
 import java.util.Date;
 
 public class User extends Entity<Integer>{
+    private String login;
     private String name;
     private String lastName;
     private Date DOB;
@@ -15,7 +16,8 @@ public class User extends Entity<Integer>{
 
     }
 
-    public User(String name, String lastName, Date DOB, String sex, int preferencesId, int bookingId, String password) {
+    public User(String login,String name, String lastName, Date DOB, String sex, int preferencesId, int bookingId, String password) {
+        this.login = login;
         this.name = name;
         this.lastName = lastName;
         this.DOB = DOB;
@@ -23,6 +25,14 @@ public class User extends Entity<Integer>{
         this.preferencesId = preferencesId;
         this.bookingId = bookingId;
         this.password = password;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getName() {
@@ -84,6 +94,7 @@ public class User extends Entity<Integer>{
     @Override
     public String toString() {
         return "User{" +
+                "login='" + login + '\'' +
                 "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", DOB=" + DOB +

@@ -16,13 +16,14 @@ public class UserDAOImpl extends CrudDAO<User> {
     }
 
     private void setStatement(User entity, PreparedStatement preparedStatement) throws SQLException {
-        preparedStatement.setString(1, entity.getName());
-        preparedStatement.setString(2, entity.getLastName());
-        preparedStatement.setDate(3, (Date) entity.getDOB());
-        preparedStatement.setString(4, entity.getSex());
-        preparedStatement.setInt(5, entity.getPreferencesId());
-        preparedStatement.setInt(6, entity.getBookingId());
-        preparedStatement.setString(7, entity.getPassword());
+        preparedStatement.setString(1,entity.getLogin());
+        preparedStatement.setString(2, entity.getName());
+        preparedStatement.setString(3, entity.getLastName());
+        preparedStatement.setDate(4, (Date) entity.getDOB());
+        preparedStatement.setString(5, entity.getSex());
+        preparedStatement.setInt(6, entity.getPreferencesId());
+        preparedStatement.setInt(7, entity.getBookingId());
+        preparedStatement.setString(8, entity.getPassword());
     }
 
     @Override
@@ -47,6 +48,7 @@ public class UserDAOImpl extends CrudDAO<User> {
         while (resultSet.next()) {
             user = new User();
             user.setId(resultSet.getInt("id"));
+            user.setName(resultSet.getString("login"));
             user.setName(resultSet.getString("name"));
             user.setLastName(resultSet.getString("last_name"));
             user.setDOB(resultSet.getDate("DOB"));

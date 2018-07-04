@@ -5,6 +5,7 @@ import ua.nure.skrypnyk.helper.PropertyHolder;
 
 import java.beans.PropertyVetoException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataSource {
@@ -47,6 +48,5 @@ public class DataSource {
         } catch (PropertyVetoException e) {
             e.printStackTrace();
         }
-        System.out.println(poolConnections + "~~~~~~~~~~~~~~~~~~");
     }
 }

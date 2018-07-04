@@ -62,6 +62,7 @@ public abstract class CrudDAO<T extends Entity<Integer>> implements DAO<Integer,
     public T getBy(String fieldName, String value) {
         String sql = String.format(FIND_BY, type.getSimpleName(), fieldName);
         Connection connection = dataSource.getConnection();
+        System.out.println(connection);
         List result = null;
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);

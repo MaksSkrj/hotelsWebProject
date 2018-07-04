@@ -32,8 +32,8 @@ public class SQLs {
     public static final String INSERT_ROOM_STATUS = "Insert into room_status (room_id, booking_id, arrival, departure, employee_id, full_price) values (?,?,?,?,?,?)";
     public static final String UPDATE_ROOM_STATUS = "UPDATE room_status SET room_id = ?, booking_id = ?, arrival = ?, departure = ?, employee_id = ?, full_price = ?, WHERE id = ?";
 
-    public static final String INSERT_USER = "Insert into user (name, last_name, DOB, sex, pregerences_id, booking_id, password) values (?,?,?,?,?,?,?)";
-    public static final String UPDATE_USER = "UPDATE user SET name = ?, last_name = ?, DOB = ?, sex = ?, preferences_id = ?, booking_id = ?, password = ? WHERE id = ?";
+    public static final String INSERT_USER = "Insert into user (login, name, last_name, DOB, sex, pregerences_id, booking_id, password) values (?,?,?,?,?,?,?)";
+    public static final String UPDATE_USER = "UPDATE user SET login = ?, name = ?, last_name = ?, DOB = ?, sex = ?, preferences_id = ?, booking_id = ?, password = ? WHERE id = ?";
 
 
 }

@@ -5,6 +5,7 @@ import ua.nure.skrypnyk.model.Entity;
 import java.util.Date;
 
 public class UserDTO extends Entity<Integer> {
+    private String login;
     private String name;
     private String lastName;
     private Date DOB;
@@ -17,7 +18,8 @@ public class UserDTO extends Entity<Integer> {
 
     }
 
-    public UserDTO(String name, String lastName, Date DOB, String sex, int preferencesId, int bookingId, String password) {
+    public UserDTO(String login, String name, String lastName, Date DOB, String sex, int preferencesId, int bookingId, String password) {
+        this.login = login;
         this.name = name;
         this.lastName = lastName;
         this.DOB = DOB;
@@ -25,6 +27,14 @@ public class UserDTO extends Entity<Integer> {
         this.preferencesId = preferencesId;
         this.bookingId = bookingId;
         this.password = password;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getName() {
@@ -86,6 +96,7 @@ public class UserDTO extends Entity<Integer> {
     @Override
     public String toString() {
         return "User{" +
+                "login='" + login + '\'' +
                 "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", DOB=" + DOB +
