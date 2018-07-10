@@ -23,6 +23,7 @@ public class RegistrationServlet extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String confirmPassword = request.getParameter("confirmPassword");
         UserDTO userDTO = UserServiceImpl.getInstance().getByLogin(login);
+        System.out.println(userDTO.getLogin() + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         Connection connection = DataSource.getInstance().getConnection();
 
@@ -36,8 +37,6 @@ public class RegistrationServlet extends HttpServlet {
                 System.out.println("exception in insert statement");
                 e.printStackTrace();
             }
-
-            //request.getSession().setAttribute("user", userDTO);
             response.sendRedirect(request.getSession().getAttribute("url").toString());
         } else if (!userDTO.equals(null)) {
             request.getSession().setAttribute("message", "This login already exists. Please try again.");
