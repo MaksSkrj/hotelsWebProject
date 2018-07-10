@@ -10,6 +10,7 @@
           <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.2" />
           <element id="library" level="project" name="Maven: javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
+          <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
           <element id="library" level="project" name="Maven: io.craftsman:dozer-jdk8-support:1.0.2" />
           <element id="library" level="project" name="Maven: net.sf.dozer:dozer:5.5.1" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.1" />

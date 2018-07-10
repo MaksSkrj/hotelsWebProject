@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DataSource {
+public final class DataSource {
     private static ComboPooledDataSource poolConnections;
     private static DataSource dataSource;
 

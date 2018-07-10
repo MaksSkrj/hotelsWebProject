@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Июл 04 2018 г., 16:12
+-- Время создания: Июл 04 2018 г., 16:59
 -- Версия сервера: 10.1.33-MariaDB
 -- Версия PHP: 7.2.6
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `tours_db`
+-- База данных: `hotels_db`
 --
 
 -- --------------------------------------------------------
@@ -132,6 +132,7 @@ CREATE TABLE `room_status` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
+  `login` varchar(50) NOT NULL,
   `name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `DOB` date NOT NULL,
@@ -145,8 +146,8 @@ CREATE TABLE `user` (
 -- Дамп данных таблицы `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `last_name`, `DOB`, `sex`, `preferences_id`, `booking_id`, `password`) VALUES
-  (1, 'maksym', 'skrypnyk', '1998-08-23', 'male', 1, 1, '12345');
+INSERT INTO `user` (`id`, `login`, `name`, `last_name`, `DOB`, `sex`, `preferences_id`, `booking_id`, `password`) VALUES
+  (1, 'maks0n', 'maksym', 'skrypnyk', '1998-08-23', 'male', 1, 1, '12345');
 
 --
 -- Индексы сохранённых таблиц
